@@ -37,7 +37,7 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
     }
 
 
-    // 204
+    // 404
     @ExceptionHandler({DataNotFoundException.class, CityNotFoundException.class})
     public ResponseEntity<Object> handleNotFound(final Exception ex, final WebRequest request) {
         final String bodyOfResponse = "Error";
